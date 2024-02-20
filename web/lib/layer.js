@@ -1,6 +1,11 @@
 import * as THREE from 'three';
 
-export class Layer {
+export class Layer { 
+    /*
+    TODOs
+    - Add Multiple States
+        - clickable, expand and contract
+    */
     constructor(row,col,spacing) {
         this.group = new THREE.Group();
 
