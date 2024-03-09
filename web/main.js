@@ -24,7 +24,7 @@ renderer.render(scene,camera)
 // Example usage
 const gridSize = 5;
 const spacing = 2;
-const nn_layer = new Layer(10, 10, 3);
+const nn_layer = new Layer(512, 20, 3);
 scene.add(nn_layer.group);
 
 const pointLight = new THREE.PointLight(0xFFFFFF);

@@ -1,4 +1,5 @@
 import * as THREE from 'three';
+import { Node }  from './node.js';
 
 export class Layer { 
     /*
@@ -13,19 +14,15 @@ export class Layer {
 
         for (let i = 0; i < row; i++) {
             for (let j = 0; j < col; j++) {
-                // const sphereGeometry = new THREE.SphereGeometry(1, 32, 32); 
-                // const sphereMaterial = new THREE.MeshBasicMaterial({ // sphere material (will change)
-                //    color: 0xffffff,
-                // });
                 
-                // const sphere = new THREE.Mesh(sphereGeometry, sphereMaterial);
-
 		// Create Node() here
 
-                sphere.position.x = i * spacing - (row - 1) * spacing * 0.5;
-                sphere.position.y = j * spacing - (col - 1) * spacing * 0.5;
+                const x = i * spacing - (row - 1) * spacing * 0.5;
+                const y = j * spacing - (col - 1) * spacing * 0.5;
 
-                this.group.add(sphere);
+		const node = new Node(x,y,1,1)
+                
+		this.group.add(node.sprite);
             }
         }
 
