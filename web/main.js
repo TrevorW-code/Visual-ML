@@ -1,7 +1,6 @@
 import './style.css'
 import * as THREE from 'three';
 import { Layer } from './lib/layer.js';
-
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 
 const scene = new THREE.Scene();
@@ -14,15 +13,14 @@ const renderer = new THREE.WebGLRenderer({
 	canvas: document.querySelector('#bg')
 });
 
-renderer.setPixelRatio( window.devicePixelRatio );
-renderer.setSize( window.innerWidth, window.innerHeight );
-
 const sizes = {
     width: window.innerWidth,
     height: window.innerHeight
 }
-camera.position.setZ(30); // move back
 
+renderer.setPixelRatio( window.devicePixelRatio );
+renderer.setSize( window.innerWidth, window.innerHeight );
+camera.position.setZ(30); // move back, hardcoded so please remove
 renderer.render(scene,camera)
 
 // Example usage
