@@ -15,8 +15,6 @@ export class Layer {
         for (let i = 0; i < row; i++) {
             for (let j = 0; j < col; j++) {
                 
-		// Create Node() here
-
                 const x = i * spacing - (row - 1) * spacing * 0.5;
                 const y = j * spacing - (col - 1) * spacing * 0.5;
 
