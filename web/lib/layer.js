@@ -8,16 +8,19 @@ export class Layer {
     */
     constructor(row,col,spacing) {
         this.group = new THREE.Group();
+	this.id = "id" + Math.random().toString(16).slice(2)
+	this.color = 0xffffff 
 
         for (let i = 0; i < row; i++) {
             for (let j = 0; j < col; j++) {
-                const sphereGeometry = new THREE.SphereGeometry(1, 32, 32); 
+                // const sphereGeometry = new THREE.SphereGeometry(1, 32, 32); 
+                // const sphereMaterial = new THREE.MeshBasicMaterial({ // sphere material (will change)
+                //    color: 0xffffff,
+                // });
                 
-                const sphereMaterial = new THREE.MeshBasicMaterial({ // sphere material (will change)
-                    color: 0xffffff,
-                });
-                
-                const sphere = new THREE.Mesh(sphereGeometry, sphereMaterial);
+                // const sphere = new THREE.Mesh(sphereGeometry, sphereMaterial);
+
+		// Create Node() here
 
                 sphere.position.x = i * spacing - (row - 1) * spacing * 0.5;
                 sphere.position.y = j * spacing - (col - 1) * spacing * 0.5;

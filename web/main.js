@@ -2,9 +2,7 @@ import './style.css'
 import * as THREE from 'three';
 import { Layer } from './lib/layer.js';
 
-import { OrbitControls} from 'three/examples/jsm/controls/OrbitControls';
-
-
+import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 
 const scene = new THREE.Scene();
 
@@ -26,7 +24,7 @@ renderer.render(scene,camera)
 // Example usage
 const gridSize = 5;
 const spacing = 2;
-const nn_layer = new Layer(4, 4, 3);
+const nn_layer = new Layer(10, 10, 3);
 scene.add(nn_layer.group);
 
 const pointLight = new THREE.PointLight(0xFFFFFF);
